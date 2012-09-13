@@ -8,7 +8,7 @@ BUILDING KERNEL
 
 3. Download kernel source into MTDEV-BUILD-KERNEL folder
 $ cd MTDEV-BUILD-KERNEL
-$ git clone https://github.com/g60madman/MTDEV-KERNEL-CM9.git kernel
+$ git clone https://github.com/MTDEV-KERNEL/MTDEV-KERNEL-CM9.git kernel
 
 4. Now run the following command from inside buildkernel dir
 $ sh ./buildkernel.sh
