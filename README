@@ -1,0 +1,26 @@
+Welcome to the MTDEV Kernel Building Script 
+This script is designed to create a .zip to flash of a new kernel. This script was designed to make life easier for all developers to quickly test kernels before building the ROM. All tools and prebuilt software are located in this MTDEV-BUILD-KERNEL directory. The things you will need is Kernel Source, and a known working boot.img
+
+BUILDING KERNEL
+1. Edit buildkernel.sh varibles based on your directory structure
+
+2. Copy a known good working boot.img of the kernel you wish to build (CM7, CM9, CM10) into the root of MTDEV-BUILD-KERNEL
+
+3. Download kernel source into MTDEV-BUILD-KERNEL folder
+$ cd MTDEV-BUILD-KERNEL
+$ git clone https://github.com/g60madman/MTDEV-KERNEL-CM9.git kernel
+
+4. Now run the following command from inside buildkernel dir
+$ sh ./buildkernel.sh
+
+COMPLETE FILES
+Once the script has completed you will have a the following in the releasetools directory
+boot.img - A new boot.img
+*.zip - A new flashable kernel you and test out
+kernel - a new kernel you can place inside your device folders for building a ROM
+
+CONFIG INFO
+If you are building another kernel other than MTDEV kernels please make sure you config file for the kernel is located inside MTDEV-BUILD-KERNEL\kernel\config The script is designed to run the kernel build based on the fact the config is in the root of your kernel folder.
+
+ADVANCE INFO
+When running the buildkernel.sh it will extract your boot.img into ramdisk folder. In this folder it will have permissions for the kernel based on what to do when it boots based on the *.rc files. While the kernel is building if you have other permission you want to test you can replace them during the build. When doing this I usally copy the boot.img-ramdisk folder make changes and during the build replace with my new permissioins if needed.
