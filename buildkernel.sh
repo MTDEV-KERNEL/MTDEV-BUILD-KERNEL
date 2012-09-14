@@ -88,7 +88,6 @@ then
 	../tools/bootimg/mkbootfs ../ramdisk/boot.img-ramdisk | gzip > ramdisk.gz
 #	cp ../ramdisk/ramdisk.img ramdisk.img
 	../tools/bootimg/mkbootimg --kernel zImage --ramdisk ramdisk.gz --cmdline "console=ttyMSM1 androidboot.hardware=triumph" -o boot.img --base 0x00200000
-        cp $KERNELDIR/arch/arm/boot/zImage ../releasetools/kernel
 	rm -f zImage
 	rm -f *.gz
 	rm -f ramdisk.img
