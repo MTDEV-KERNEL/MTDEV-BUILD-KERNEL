@@ -22,7 +22,7 @@ export KERNELDIR=/media/android/MTDEV-BUILD-KERNEL/kernel/
 
 #used in the build version and zip file name
 export KERNEL_NAME=MTDEV-Kernel
-export BUILDVER=CM9
+export BUILDVER=CM10
 
 
 #################################
@@ -93,6 +93,7 @@ then
 	rm -f ramdisk.img
 	rm -f *.zip
 	zip -r $KERNELZIP_VERSION *
+        cp $KERNELDIR/arch/arm/boot/zImage ../releasetools/kernel
 	cd ..
 	echo "Finished building kernel." 
 	echo "Flash the Zip file $KERNELZIP_VERSION through CWM to test it."
