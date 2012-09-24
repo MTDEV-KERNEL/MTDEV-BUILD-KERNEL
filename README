@@ -14,7 +14,7 @@ $ git clone https://github.com/MTDEV-KERNEL/MTDEV-KERNEL-CM9.git kernel
 $ sh ./buildkernel.sh
 
 COMPLETE FILES
-Once the script has completed you will have a the following in the releasetools directory
+Once the script has completed you will have the following in the releasetools directory
 boot.img - A new boot.img
 *.zip - A new flashable kernel you and test out
 kernel - a new kernel you can place inside your device folders for building a ROM
